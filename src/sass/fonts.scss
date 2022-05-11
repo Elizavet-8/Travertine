@@ -1,0 +1,20 @@
+@mixin font($fname, $fstyle, $fweight, $furl, $format) {
+  @font-face {
+    font-family: $fname;
+    font-style: $fstyle;
+    font-weight: $fweight;
+    src: url($furl) format($format);
+  }
+}
+
+@include font('Montserrat', normal, 300, '../fonts/Montserrat-Light.woff2', 'woff2');
+@include font('Montserrat', normal, 400, '../fonts/Montserrat-Regular.woff2', 'woff2');
+@include font('Montserrat', normal, 500, '../fonts/Montserrat-Medium.woff2', 'woff2');
+@include font('Montserrat', normal, 600, '../fonts/Montserrat-SemiBold.woff2', 'woff2');
+@include font('Montserrat', italic, 600, '../fonts/Montserrat-SemiBoldItalic.woff2', 'woff2');
+
+@include font('Montserrat', normal, 300, '../fonts/Montserrat-Light.woff', 'woff');
+@include font('Montserrat', normal, 400, '../fonts/Montserrat-Regular.woff', 'woff');
+@include font('Montserrat', normal, 500, '../fonts/Montserrat-Medium.woff', 'woff');
+@include font('Montserrat', normal, 600, '../fonts/Montserrat-SemiBold.woff', 'woff');
+@include font('Montserrat', italic, 600, '../fonts/Montserrat-SemiBoldItalic.woff', 'woff');

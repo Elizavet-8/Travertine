@@ -1,0 +1,334 @@
+// general
+html {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul,
+ol {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[class] {
+  list-style: none;
+}
+
+img {
+  display: block;
+}
+
+input,
+button {
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s;
+  cursor: pointer;
+
+  &:active, &:focus, &:hover {
+    color: inherit;
+    opacity: 0.85;
+  }
+}
+
+html {
+  height: 100%;
+  overflow-y: auto;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 120%;
+  color: $black;
+  background: $back;
+
+  &.overflow {
+    overflow: hidden;
+  }
+}
+
+.container {
+  max-width: 137rem;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  margin: 0 0 2.5rem 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+  font-size: 100vw  / (1920/10);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.border-none {
+  border: none;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 4rem;
+  line-height: 130%;
+  text-align: center;
+  margin: auto;
+  max-width: 53.1rem;
+  text-transform: uppercase;
+}
+
+.color-orange {
+  color: $light-orange;
+}
+
+.color-light-brown {
+  color: $brown;
+}
+
+sup {
+  font-size: 1.2rem;
+  line-height: 0;
+}
+
+h4 {
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 130%;
+  text-align: center;
+  color: $light-orange;
+  font-style: italic;
+  text-transform: uppercase;
+  margin-bottom: 1.8rem;
+}
+
+h5 {
+  font-size: 1.8rem;
+  line-height: 120%;
+}
+
+.btn {
+  width: 100%;
+  max-width: 24.0rem;
+  height: 5.0rem;
+  background: $orange;
+  box-shadow: 0px 0px 2.4rem $orange;
+  border: none;
+  border-radius: 5.5rem;
+  font-weight: 600;
+  line-height: 2.2rem;
+  text-transform: uppercase;
+  color: $white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &-play {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 6rem;
+    width: 10.3rem;
+    box-shadow: none;
+    margin: auto;
+
+    &__svg {
+      height: 1.7rem;
+      width: 1.9rem;
+    }
+  }
+}
+
+.tab__block {
+  display: none;
+
+  &:first-child {
+    display: block;
+  }
+}
+
+::-moz-placeholder {
+  font-weight: 500;
+  line-height: 120%;
+  color: $brown;
+}
+
+:-moz-placeholder {
+  font-weight: 500;
+  line-height: 120%;
+  color: $brown;
+}
+
+:-ms-input-placeholder {
+  font-weight: 500;
+  line-height: 120%;
+  color: $brown;
+}
+
+::-webkit-input-placeholder {
+  font-weight: 500;
+  line-height: 120%;
+  color: $brown;
+}
+
+input {
+  border: none;
+  background: none;
+  border-bottom: 1px solid $brown;
+  width: 100%;
+  padding-bottom: 1.3rem;
+}
+
+.swiper-pagination-bullet {
+  opacity: 0.5;
+  background: $orange;
+
+  &-active {
+    background: $orange;
+    opacity: 1;
+  }
+}
+
+
+@media only screen and (max-width: 1600px) {
+  html {
+    font-size: 100vw / (1600/10);
+  }
+}
+
+
+@media only screen and (max-width: $large-desktop) {
+  html {
+    font-size: 100vw / (1440/10);
+  }
+}
+
+@media only screen and (max-width: $small-tablet) {
+  html {
+    font-size: 100vw / (1024/10);
+  }
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+@media only screen and (max-width: $large-mobile) {
+  html {
+    font-size: 100vw / (580/10);
+  }
+  body {
+    font-size: 1.6rem;
+  }
+  h2 {
+    font-size: 1.9rem;
+    line-height: 130%;
+    max-width: 32rem;
+  }
+  h4 {
+    margin-bottom: .8rem;
+    font-size: 1.4rem;
+    line-height: 100%;
+  }
+  .btn {
+    &-play {
+      border-radius: 5px;
+      height: 4.2rem;
+      width: 7.2rem;
+
+      &__svg {
+        height: 1.3rem;
+        width: 1.2rem;
+      }
+    }
+  }
+}
+@media only screen and (max-width: $small-mobile) {
+  html {
+    font-size: 100vw / (450/10);
+  }
+}
