@@ -10,7 +10,7 @@
   }
 
   &-info {
-    background: #F6F4EF;
+    background: $milky;
     border-radius: 2rem;
     padding: 6.9rem 4.6rem 8.4rem;
     display: grid;
@@ -34,7 +34,7 @@
         right: 0;
         top: 33.7rem;
         margin: auto;
-        background: #B8A58A;
+        background: $brown;
         border-radius: 5px;
         padding: 1.4rem 2.1rem;
         color: $white;
@@ -126,7 +126,7 @@
 @media only screen and (max-width: $large-mobile) {
   .contacts {
     &__title {
-      background: #F6F4EF;
+      background: $milky;
       max-width: none;
       padding-top: 6rem;
       padding-bottom: 4rem;
