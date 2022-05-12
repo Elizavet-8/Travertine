@@ -1,6 +1,9 @@
 .header {
-  padding: 2rem 0 0;
-  background: $milky;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
   &__burger {
     display: none;
     position: relative;
@@ -36,6 +39,7 @@
     align-items: center;
     position: relative;
     z-index: 999;
+
     &__svg {
       width: 7.7rem;
       height: 6.9rem;
@@ -51,6 +55,7 @@
   }
 
   &__row {
+    padding: 2rem 0 0;
     align-items: center;
     display: grid;
     grid-template-columns: 1fr 73.2rem 24rem;
@@ -76,9 +81,8 @@
   }
 }
 
-@media only screen and (max-width: $small-tablet) {
+@media only screen and (max-width: $medium-tablet) {
   .header {
-    padding-top: 1.2rem;
 
     &-logo {
       &__svg {
@@ -91,6 +95,7 @@
     }
 
     &__row {
+      padding-top: 1.2rem;
       display: flex;
       justify-content: space-between;
     }
@@ -177,16 +182,4 @@
       }
     }
   }
-}
-
-@media only screen and (max-width: $small-tablet) {
-
-}
-
-@media only screen and (max-width: $small-mobile) {
-
-}
-
-@media only screen and (max-width: $tiny-mobile) {
-
 }

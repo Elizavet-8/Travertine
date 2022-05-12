@@ -74,7 +74,6 @@ a {
   cursor: pointer;
 
   &:active, &:focus, &:hover {
-    color: inherit;
     opacity: 0.85;
   }
 }
@@ -150,6 +149,20 @@ html {
   border: none;
 }
 
+.background-none {
+  background: none;
+}
+.p-0 {
+  padding: 0;
+}
+.pt-12 {
+  padding-top: 12rem;
+}
+
+.pb-14 {
+  padding-bottom: 14rem;
+}
+
 h2 {
   font-weight: 600;
   font-size: 4rem;
@@ -185,8 +198,16 @@ h4 {
 }
 
 h5 {
+  font-weight: 600;
   font-size: 1.8rem;
   line-height: 120%;
+}
+
+.subtitle {
+  font-weight: 600;
+  font-size: 2.2rem;
+  line-height: 130%;
+  text-transform: uppercase;
 }
 
 .btn {
@@ -274,6 +295,82 @@ input {
   }
 }
 
+.breadcrumb {
+  padding-top: 20.4rem;
+  font-weight: 500;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    &:first-child {
+      color: #BAAAA0;
+
+      &:before {
+        content: none;
+      }
+    }
+
+    &:before {
+      content: "\00a0/\00a0 ";
+    }
+  }
+}
+
+.social {
+  &__block {
+    max-width: 29.3rem;
+  }
+
+  &__row {
+    display: flex;
+  }
+
+  &__link {
+    width: 3.8rem;
+    height: 3.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    margin-right: 1rem;
+
+    &_blue {
+      background: $blue;
+    }
+
+    &_red {
+      background: $red;
+      margin-right: 0;
+    }
+
+    &_small {
+      font-weight: 500;
+      font-size: 1.6rem;
+      color: $brown;
+      float: right;
+      margin-top: 1rem;
+    }
+  }
+
+  &__svg {
+    height: 1.6rem;
+    width: 2.5rem;
+
+    &_youtube {
+      height: 1.1rem;
+      width: 1.1rem;
+    }
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 1.6rem;
+    margin-left: 1.6rem;
+    max-width: 17rem;
+  }
+}
 
 @media only screen and (max-width: 1600px) {
   html {
@@ -288,12 +385,26 @@ input {
   }
 }
 
-@media only screen and (max-width: $small-tablet) {
+@media only screen and (max-width: $medium-tablet) {
   html {
-    font-size: 100vw / (1024/10);
+    font-size: 100vw / (998/10);
   }
+}
+@media only screen and (max-width: $small-tablet) {
   .container {
     padding: 0 2rem;
+  }
+  .breadcrumb {
+    display: none;
+  }
+  body {
+    font-size: 2rem;
+  }
+  .pt-12 {
+    padding-top: 15.1rem;
+  }
+  .pb-14 {
+    padding-bottom: 8.4rem;
   }
 }
 
@@ -327,6 +438,7 @@ input {
     }
   }
 }
+
 @media only screen and (max-width: $small-mobile) {
   html {
     font-size: 100vw / (450/10);

@@ -45,15 +45,12 @@
 
 .main {
   text-align: center;
-  padding-top: 6.9rem;
+  padding-top: 19.5rem;
   padding-bottom: 6.4rem;
   background: $milky;
 
   &__title {
-    font-weight: 600;
-    font-size: 2.2rem;
     line-height: 100%;
-    text-transform: uppercase;
   }
 
   &__img {
@@ -330,10 +327,7 @@
 
   &__subtitle {
     padding: 2rem;
-    font-weight: 600;
-    font-size: 2.2rem;
     line-height: 100%;
-    text-transform: uppercase;
   }
 
   &__img {
@@ -359,9 +353,7 @@
 
     &__tab {
       margin: 0 2.5rem;
-      font-size: 2.2rem;
       line-height: 100%;
-      text-transform: uppercase;
       position: relative;
       cursor: pointer;
 
@@ -699,9 +691,7 @@
       border: 1px solid $light-orange;
       border-radius: 1rem;
       color: $light-orange;
-      font-size: 2.2rem;
       line-height: 120%;
-      text-transform: uppercase;
     }
 
     &__tab {
@@ -781,9 +771,6 @@
 
   &__subtitle {
     max-width: 32.9rem;
-    font-weight: 600;
-    font-size: 2.2rem;
-    line-height: 130%;
   }
 
   &__block {
@@ -872,10 +859,9 @@
   }
 
   &__price {
-    font-weight: 600;
-    font-size: 2.2rem;
     line-height: 100%;
     color: $light-orange;
+    text-transform: none;
   }
 
   &__footer {
@@ -901,8 +887,6 @@
   &__caption {
     margin: 1.8rem auto 0;
     max-width: 64rem;
-    font-size: 2.2rem;
-    text-transform: uppercase;
   }
 
   &__row {
@@ -1052,19 +1036,10 @@
 
   &__subtitle {
     margin-bottom: 1.2rem;
-
-    &_bold {
-      font-weight: 600;
-      font-size: 2.2rem;
-      text-transform: uppercase;
-    }
   }
 
   &__link {
-    font-weight: 600;
-    font-size: 2.2rem;
     line-height: 120%;
-    text-transform: uppercase;
     color: $light-orange;
     display: block;
     max-width: 44rem;
@@ -1164,14 +1139,12 @@
   }
 }
 
-@media only screen and (max-width: $small-tablet) {
-  .main {
-    &__slider {
-      margin-left: -2rem;
-      margin-right: -2rem;
+@media only screen and (max-width: $medium-tablet) {
+  .main-description {
+    &__text {
+      max-width: 26rem;
     }
   }
-
   .why {
     &__row {
       flex-direction: column;
@@ -1198,7 +1171,7 @@
 
   .goods {
     &__grid {
-      grid-template-columns: repeat(4, 23.3rem);
+      grid-template-columns: repeat(4, 22.6rem);
     }
 
     &__column {
@@ -1224,22 +1197,22 @@
     }
   }
 
-  .whom {
-    &-tab {
-      &__list {
-        grid-template-columns: 1fr;
-        justify-content: center;
-      }
-
-      &__text {
-        margin: auto;
-      }
+  .delivery {
+    &__row {
+      grid-template-columns: repeat(3, 28rem);
     }
   }
 
-  .cooperation {
-    &__wrapper {
-      padding: 8rem;
+  .usage {
+    &-tab {
+      &__block {
+        &_second {
+          .usage-tab-button:nth-child(10) {
+            top: 40rem;
+            right: 1rem;
+          }
+        }
+      }
     }
   }
 
@@ -1258,13 +1231,52 @@
   }
 }
 
+@media only screen and (max-width: $small-tablet) {
+  .main {
+    &__slider {
+      margin-left: -2rem;
+      margin-right: -2rem;
+    }
+  }
+
+  .goods {
+    &__grid {
+      grid-template-columns: repeat(4, 23.3rem);
+    }
+  }
+
+  .whom {
+    &-tab {
+      &__list {
+        grid-template-columns: 1fr;
+        justify-content: center;
+      }
+
+      &__text {
+        margin: auto;
+      }
+    }
+  }
+
+  .cooperation {
+    &__wrapper {
+      padding: 8rem;
+    }
+  }
+  .delivery {
+    &__row {
+      grid-template-columns: repeat(3, 24rem);
+    }
+  }
+}
+
 @media only screen and (max-width: $large-mobile) {
   .schedule {
     display: none;
   }
 
   .main {
-    padding: 4.1rem 0;
+    padding: 12.2rem 0 4.1rem;
 
     &__title {
       font-size: 1.4rem;

@@ -21,8 +21,8 @@
 </head>
 <body>
 <div class="wrapper">
-    <main>
-        <section id="schedule" class="schedule">
+    <header class="header">
+        <div id="schedule" class="schedule">
             <div class="container">
                 <div class="schedule__row">
                     <div class="schedule__text">
@@ -57,38 +57,38 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <header class="header">
-            <div class="container">
-                <div class="header__row">
-                    <a class="header-logo logo" href="index.html">
-                        <img class="header-logo__svg logo__svg" src="dist/images/logo.png" alt="logo">
-                        <span class="header-logo__text">
+        </div>
+        <div class="container">
+            <div class="header__row">
+                <a class="header-logo logo" href="index.html">
+                    <img class="header-logo__svg logo__svg" src="dist/images/logo.png" alt="logo">
+                    <span class="header-logo__text">
                             Натуральный травертин
                             от производителя №1
                             поставки по России и СНГ
                         </span>
-                    </a>
-                    <nav class="header-nav" id="nav">
-                        <ul class="header-nav__list">
-                            <li class="header-nav__item"><a class="header-nav__link" href="">Продукция</a></li>
-                            <li class="header-nav__item"><a class="header-nav__link" href="">Услуги</a></li>
-                            <li class="header-nav__item"><a class="header-nav__link" href="">Наши работы</a></li>
-                            <li class="header-nav__item"><a class="header-nav__link" href="">Полезное</a></li>
-                            <li class="header-nav__item"><a class="header-nav__link" href="">Контакты</a></li>
+                </a>
+                <nav class="header-nav" id="nav">
+                    <ul class="header-nav__list">
+                        <li class="header-nav__item"><a class="header-nav__link" href="">Продукция</a></li>
+                        <li class="header-nav__item"><a class="header-nav__link" href="">Услуги</a></li>
+                        <li class="header-nav__item"><a class="header-nav__link" href="">Наши работы</a></li>
+                        <li class="header-nav__item"><a class="header-nav__link" href="">Полезное</a></li>
+                        <li class="header-nav__item"><a class="header-nav__link" href="">Контакты</a></li>
 
-                        </ul>
-                    </nav>
-                    <button class="header__btn btn" type="button">заказать звонок</button>
-                    <div class="header__burger">
-                        <div class="header__burger-line"></div>
-                    </div>
+                    </ul>
+                </nav>
+                <button class="header__btn btn" type="button">заказать звонок</button>
+                <div class="header__burger">
+                    <div class="header__burger-line"></div>
                 </div>
             </div>
-        </header>
+        </div>
+    </header>
+    <main>
         <section id="main" class="main">
             <div class="container">
-                <h1 class="main__title">
+                <h1 class="main__title subtitle">
                     Природный камень
                 </h1>
                 <img class="main__img" src="dist/images/main.png">
@@ -219,7 +219,7 @@
                     <div class="goods__column">
                         <a href="" class="goods__block">
                             <img class="goods__img" src="dist/images/goods1.png">
-                            <h5 class="goods__subtitle">
+                            <h5 class="goods__subtitle subtitle">
                                 Паттерн
                             </h5>
                         </a>
@@ -227,7 +227,7 @@
                     <div class="goods__column">
                         <a href="" class="goods__block">
                             <img class="goods__img" src="dist/images/goods2.png">
-                            <h5 class="goods__subtitle">
+                            <h5 class="goods__subtitle subtitle">
                                 Мозаика
                             </h5>
                         </a>
@@ -235,7 +235,7 @@
                     <div class="goods__column">
                         <a href="" class="goods__block">
                             <img class="goods__img" src="dist/images/goods3.png">
-                            <h5 class="goods__subtitle">
+                            <h5 class="goods__subtitle subtitle">
                                 Аксессуары
                             </h5>
                         </a>
@@ -243,7 +243,7 @@
                     <div class="goods__column">
                         <a href="" class="goods__block">
                             <img class="goods__img" src="dist/images/goods4.png">
-                            <h5 class="goods__subtitle">
+                            <h5 class="goods__subtitle subtitle">
                                 Изделия
                             </h5>
                         </a>
@@ -251,7 +251,7 @@
                     <div class="goods__column">
                         <a href="" class="goods__block">
                             <img class="goods__img" src="dist/images/goods5.png">
-                            <h5 class="goods__subtitle">
+                            <h5 class="goods__subtitle subtitle">
                                 Блоки
                             </h5>
                         </a>
@@ -259,7 +259,7 @@
                     <div class="goods__column">
                         <a href="" class="goods__block">
                             <img class="goods__img" src="dist/images/goods6.png">
-                            <h5 class="goods__subtitle">
+                            <h5 class="goods__subtitle subtitle">
                                 Слэбы
                             </h5>
                         </a>
@@ -267,7 +267,7 @@
                     <div class="goods__column">
                         <a href="" class="goods__block">
                             <img class="goods__img" src="dist/images/goods7.png">
-                            <h5 class="goods__subtitle">
+                            <h5 class="goods__subtitle subtitle">
                                 Плитка
                             </h5>
                         </a>
@@ -275,7 +275,7 @@
                     <div class="goods__column">
                         <a href="" class="goods__block">
                             <img class="goods__img" src="dist/images/goods8.png">
-                            <h5 class="goods__subtitle">
+                            <h5 class="goods__subtitle subtitle">
                                 3D-панели
                             </h5>
                         </a>
@@ -293,9 +293,9 @@
                 </h2>
                 <div class="usage-tab tab">
                     <ul class="usage-tab__tabs tab__tabs">
-                        <li class="usage-tab__tab tab__tab active">В ИНТЕРЬЕРЕ</li>
-                        <li class="usage-tab__tab tab__tab">ВНЕШНЯЯ ОТДЕЛКА</li>
-                        <li class="usage-tab__tab tab__tab">НА УЧАСТКЕ</li>
+                        <li class="usage-tab__tab subtitle tab__tab active">В ИНТЕРЬЕРЕ</li>
+                        <li class="usage-tab__tab subtitle tab__tab">ВНЕШНЯЯ ОТДЕЛКА</li>
+                        <li class="usage-tab__tab subtitle tab__tab">НА УЧАСТКЕ</li>
                     </ul>
                     <div class="usage-tab__content tab__content">
                         <div class="usage-tab__block usage-tab__block_first tab__block">
@@ -1245,7 +1245,7 @@
                     ВЫ ВЫБИРАЕТЕ КАМЕНЬ ДЛЯ СЕБЯ ИЛИ ДЛЯ КЛИЕНТА?
                 </h2>
                 <div class="whom-tab tab">
-                    <ul class="whom-tab__tabs tab__tabs">
+                    <ul class="whom-tab__tabs subtitle tab__tabs">
                         <li class="whom-tab__tab tab__tab active">Для себя (владелец)</li>
                         <li class="whom-tab__tab tab__tab">Для клиента (дизайнер, строительная компания)</li>
                     </ul>
@@ -1340,7 +1340,7 @@
                     </h2>
                     <div class="cooperation__row">
                         <div class="cooperation__column">
-                            <h5 class="cooperation__subtitle">
+                            <h5 class="cooperation__subtitle subtitle">
                                 ЗАКАЖИТЕ ЛЮБОЙ ОБЪЕМ ПРОДУКЦИИ
                                 С КАРЬЕРА
                                 ИЛИ ЗАВОДА
@@ -1376,7 +1376,7 @@
                         <div class="cooperation__column">
                             <div class="cooperation__card">
                                 <div class="cooperation__head">
-                                    <h5 class="cooperation__subtitle">
+                                    <h5 class="cooperation__subtitle subtitle">
                                         СКЛАД В МОСКВЕ
                                     </h5>
                                 </div>
@@ -1394,7 +1394,7 @@
                                                 всегда в наличии
                                             </p>
                                         </div>
-                                        <div class="cooperation__price">
+                                        <div class="cooperation__price subtitle">
                                             15 000 м<sup>2</sup>
                                         </div>
                                     </div>
@@ -1410,7 +1410,7 @@
                                                 стоимость от
                                             </p>
                                         </div>
-                                        <div class="cooperation__price">
+                                        <div class="cooperation__price subtitle">
                                             2 500 руб/м<sup>2</sup>
                                         </div>
                                     </div>
@@ -1439,7 +1439,7 @@
                     <h2 class="delivery__title">
                         ОПЛАТА И ДОСТАВКА
                     </h2>
-                    <h4 class="delivery__caption">
+                    <h4 class="delivery__caption subtitle">
                         Вы экономите в любом случае. Либо деньги, либо время и во всех случаях — нервы
                     </h4>
                     <div class="delivery__row">
@@ -1613,10 +1613,10 @@
                     <div class="questions__row">
                         <ul class="questions__list">
                             <li class="questions__item">
-                                <h5 class="questions__subtitle questions__subtitle_bold">
+                                <h5 class="questions__subtitle questions__subtitle_bold subtitle">
                                     НАШ ТЕЛЕФОН:
                                 </h5>
-                                <a href="" class="questions__link">
+                                <a href="" class="questions__link subtitle">
                                     8 (495) 149-2593
                                 </a>
                             </li>
@@ -1624,7 +1624,7 @@
                                 <h5 class="questions__subtitle">
                                     Наша почта:
                                 </h5>
-                                <a href="" class="questions__link">
+                                <a href="" class="questions__link subtitle">
                                     info@petro-stone.ru
                                 </a>
                             </li>
@@ -1632,7 +1632,7 @@
                                 <h5 class="questions__subtitle">
                                     Часы работы:
                                 </h5>
-                                <div class="questions__link">
+                                <div class="questions__link subtitle">
                                     С 9:00 до 21:00 Пн-Вс
                                 </div>
                             </li>
@@ -1640,14 +1640,14 @@
                                 <h5 class="questions__subtitle">
                                     Наш адрес:
                                 </h5>
-                                <a href="" class="questions__link">
+                                <a href="" class="questions__link subtitle">
                                     Россия, Московская область, Новорижское шоссе, Садовый центр Балтия (8 км. от МКАД)
                                 </a>
                             </li>
                         </ul>
                         <form class="questions-form">
                             <div class="questions-form__head">
-                                <h5 class="questions-form__subtitle questions__subtitle_bold">
+                                <h5 class="questions-form__subtitle questions__subtitle_bold subtitle">
                                     Напишите свой вопрос и мы ответим на него
                                     в течение 5 минут
                                 </h5>
@@ -1801,7 +1801,7 @@
                     </ul>
                 </div>
                 <div class="footer__column footer-social__column">
-                    <a href="" class="footer-social__link_orange">
+                    <a href="" class="footer-social__link_orange subtitle">
                         +7 (495) 260-67-15
                     </a>
                     <a href="" class="footer-social__link">
@@ -1813,24 +1813,27 @@
                         info@petro-stone.ru
                     </a>
                     <button class="footer-social__btn btn" type="button">заказать звонок</button>
-                    <div class="footer-social__row">
-                        <a href="" class="footer-social__link_back footer-social__link_back-blue">
-                            <img class="footer-social__svg footer-social__svg_vk" src="dist/images/icons/vk.svg"
-                                 alt="vk">
-                        </a>
-                        <a href="" class="footer-social__link_back footer-social__link_back-red">
-                            <img class="footer-social__svg footer-social__svg_youtube"
-                                 src="dist/images/icons/youtube.svg" alt="youtube">
-                        </a>
-                        <div class="footer-social__text">
-                            <p>
-                                Ищите нас в других соц. сетях:
-                            </p>
+                    <div class="footer-social__block social__block">
+                        <div class="social__row">
+                            <a href="" class="social__link social__link_blue">
+                                <img class="footer-social__svg social__svg social__svg_vk" src="dist/images/icons/vk.svg"
+                                     alt="vk">
+                            </a>
+                            <a href="" class="social__link social__link_red">
+                                <img class="footer-social__svg social__svg social__svg_youtube"
+                                     src="dist/images/icons/youtube.svg" alt="youtube">
+                            </a>
+                            <div class="footer-social__text social__text">
+                                <p>
+                                    Ищите нас в других соц. сетях:
+                                </p>
+                            </div>
                         </div>
+                        <a href="" class="social__link_small">
+                            @travertine_petrostone
+                        </a>
                     </div>
-                    <a href="" class="footer-social__link_small">
-                        @travertine_petrostone
-                    </a>
+
                 </div>
             </div>
             <div class="footer__text">

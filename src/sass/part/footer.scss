@@ -60,67 +60,21 @@
       margin-bottom: 3.9rem;
 
       &_orange {
-        font-weight: 600;
-        font-size: 2.2rem;
         color: $light-orange;
         margin-bottom: 1rem;
-      }
-
-      &_small {
-        font-weight: 500;
-        font-size: 1.6rem;
-        color: $brown;
-        margin-left: auto;
-      }
-
-      &_back {
-        width: 3.8rem;
-        height: 3.8rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 1rem;
-        margin-right: 1rem;
-
-        &-blue {
-          background: $blue;
-        }
-
-        &-red {
-          background: $red;
-          margin-right: 0;
-        }
       }
     }
 
     &__svg {
-      height: 1.6rem;
-      width: 2.5rem;
-
       &_email {
         margin-right: 0.6rem;
         height: 1.2rem;
         width: 1.8rem;
       }
-
-      &_youtube {
-        height: 1.1rem;
-        width: 1.1rem;
-      }
     }
 
-    &__row {
-      display: flex;
+    &__block {
       margin-top: 3.8rem;
-      margin-bottom: 1rem;
-    }
-
-
-    &__text {
-      font-weight: 500;
-      font-size: 1.6rem;
-      margin-left: 1.6rem;
-      max-width: 17rem;
     }
   }
 
@@ -138,9 +92,16 @@
   }
 }
 
+@media only screen and (max-width: $medium-tablet) {
+  .footer__container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
 @media only screen and (max-width: $small-tablet) {
   .footer {
-    padding: 14rem 0 2.4rem;
+    padding: 5rem 0 2.4rem;
 
     &__container {
       padding: 0 2rem;
