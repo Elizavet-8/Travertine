@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //слайдеры
     var swiper = new Swiper(".main__slider", {
-        slidesPerView: 4,
+        slidesPerView: 3,
         loop: true,
         speed: 2000,
         allowTouchMove: false,
@@ -67,24 +67,18 @@ document.addEventListener("DOMContentLoaded", function () {
             disableOnInteraction: false
         },
         breakpoints: {
-            0: {
-                slidesPerView: 3,
-            },
-            580: {
+            581: {
                 slidesPerView: 4,
             },
         }
     });
 
     var swiper = new Swiper(".videos__slider", {
-        slidesPerView: 6,
+        slidesPerView: 1,
         pagination: {
             el: ".swiper-pagination",
         },
         breakpoints: {
-            0: {
-                slidesPerView: 1,
-            },
             581: {
                 slidesPerView: 6,
             },
@@ -97,10 +91,51 @@ document.addEventListener("DOMContentLoaded", function () {
         },
     });
 
+    // var swiper = new Swiper(".useful__slider", {
+    //     slidesPerView: 3,
+    //     grid: {
+    //         rows: 2,
+    //     },
+    //     spaceBetween: 0,
+    //     pagination: {
+    //         el: ".useful__pagination",
+    //         clickable: true,
+    //         renderBullet: function (index, className) {
+    //             return '<span class="' + className + '">' + (index + 1) + "</span>";
+    //         },
+    //     },
+    //     // breakpoints: {
+    //     //     581: {
+    //     //         slidesPerView: 3,
+    //     //     },
+    //     // }
+    // });
+
+    var swiper = new Swiper(".useful__slider", {
+        slidesPerView: 1,
+        grid: {
+            rows: 3,
+        },
+        pagination: {
+            el: ".useful__pagination",
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '">' + (index + 1) + "</span>";
+            },
+        },
+        breakpoints: {
+            581: {
+                slidesPerView: 2,
+            },
+            999: {
+                slidesPerView: 3,
+            },
+        }
+    });
+
+
     //табы
     (function ($) {
-        // $('.tab .tab__tabs').addClass('active').find('> .tab__tab:eq(0)').addClass('active');
-
         $('.tab .tab__tabs .tab__tab').click(function (g) {
             var tab = $(this).closest('.tab'),
                 index = $(this).closest('.tab__tab').index();

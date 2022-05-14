@@ -1,0 +1,70 @@
+.useful {
+  &__slider {
+    margin-top: 8rem;
+    margin-bottom: 4rem;
+  }
+  &__wrapper {
+    flex-direction: row !important;
+    align-items: start !important;
+  }
+  &__slide {
+    padding: 0.5rem;
+    box-sizing: border-box;
+    height:auto;
+    flex:0 0 auto;
+  }
+
+  &__card {
+    background: $milky;
+    width: 100%;
+    height: 37.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+
+  &__block {
+    height: 24.3rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__img {
+    height: 100%;
+    object-fit: cover;
+    width: auto;
+    max-width: 100%;
+  }
+
+  &__subtitle {
+    padding: 2rem 2rem 1.2rem;
+  }
+
+  &__link {
+    margin: 0 2rem 3rem;
+  }
+
+  &__pagination {
+    position: static;
+    width: fit-content !important;
+    margin: auto;
+
+    .swiper-pagination-bullet {
+      height: fit-content;
+      width: fit-content;
+      border-radius: 4px;
+      opacity: 1;
+      padding: 1px .5rem;
+      font-weight: 500;
+      background: none;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: $orange;
+      color: $white;
+    }
+  }
+}
