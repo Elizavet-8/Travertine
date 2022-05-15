@@ -1125,7 +1125,7 @@
   }
 }
 
-@media only screen and (max-width: 1600px) {
+@media only screen and (max-width: $large-desktop) {
   .why {
     &__img {
       height: 32rem;

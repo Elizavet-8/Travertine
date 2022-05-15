@@ -1,0 +1,113 @@
+.blog-designing {
+  position: relative;
+
+  &__title {
+    text-align: left;
+    margin: 0 0 12.2rem;
+    max-width: 54rem;
+  }
+
+  &__svg {
+    width: 81rem;
+    height: 67.5rem;
+    position: absolute;
+    z-index: 1;
+    top: 9.4rem;
+    right: 0;
+  }
+
+  &__img {
+    width: 78.9rem;
+    height: 68.3rem;
+    position: absolute;
+    z-index: 2;
+    right: 3.1rem;
+    top: 16.2rem;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    width: fit-content;
+    margin: -2.7rem -6.8rem;
+  }
+
+  &__item {
+    padding: 2.7rem 6.8rem;
+  }
+
+  &__icon {
+    width: 5rem;
+    height: auto;
+    max-height: 5.4rem;
+    margin-bottom: 1.6rem;
+  }
+
+  &__text {
+    max-width: 30rem;
+  }
+}
+
+@media only screen and (max-width: $large-desktop) {
+  .blog-designing {
+    &__svg {
+      width: 74rem;
+      height: 60.5rem;
+    }
+
+    &__img {
+      width: 72.9rem;
+      height: 62.3rem;
+    }
+  }
+}
+
+@media only screen and (max-width: $big-desktop) {
+  .blog-designing {
+    &__svg {
+      width: 66rem;
+      height: 52.5rem;
+    }
+
+    &__img {
+      width: 64.9rem;
+      height: 54.3rem;
+    }
+  }
+}
+
+@media only screen and (max-width: $medium-tablet) {
+  .blog-designing {
+    &__svg, &__img {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: $large-mobile) {
+  .blog-designing {
+
+    &__title {
+      text-align: center;
+      margin-bottom: 6rem;
+      max-width: 320rem;
+    }
+
+    &__list {
+      grid-template-columns: 1fr;
+      margin: 0;
+    }
+
+    &__item {
+      padding: 0;
+      margin-bottom: 6rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__text {
+      max-width: 30rem;
+    }
+  }
+}

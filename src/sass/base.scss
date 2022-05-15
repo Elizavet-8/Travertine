@@ -417,15 +417,37 @@ input {
     max-width: 17rem;
   }
 }
-
-@media only screen and (max-width: 1600px) {
+.blog {
+  &__subtitle {
+    max-width: 100%;
+    margin-bottom: 1.8rem;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 120%;
+    @media only screen and (max-width: $large-mobile) {
+      margin-bottom: 1.1rem;
+    }
+  }
+  &__caption {
+    max-width: 48.7rem;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 140%;
+    text-align: center;
+    margin: 4.8rem auto 0;
+    @media only screen and (max-width: $large-mobile) {
+      margin-top: 2.4rem;
+    }
+  }
+}
+@media only screen and (max-width: $large-desktop) {
   html {
     font-size: 100vw / (1600/10);
   }
 }
 
 
-@media only screen and (max-width: $large-desktop) {
+@media only screen and (max-width: $big-desktop) {
   html {
     font-size: 100vw / (1440/10);
   }
@@ -493,6 +515,6 @@ input {
 
 @media only screen and (max-width: $small-mobile) {
   html {
-    font-size: 100vw / (450/10);
+    font-size: 100vw / (360/10);
   }
 }
