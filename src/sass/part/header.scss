@@ -81,6 +81,22 @@
   }
 }
 
+@media only screen and (max-width: $large-desktop) {
+  .header {
+    &__row {
+      padding-top: 3rem;
+    }
+  }
+}
+
+@media only screen and (max-width: $small-desktop) {
+  .header {
+    &__row {
+      padding-top: 4rem;
+    }
+  }
+}
+
 @media only screen and (max-width: $medium-tablet) {
   .header {
 
@@ -179,6 +195,29 @@
             margin: 0;
           }
         }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $large-mobile) {
+  .header {
+    &__burger {
+      width: 25px;
+
+      &:before,
+      &:after,
+      &-line {
+        height: 3.5px;
+        width: 25px;
+        border-radius: 20%;
+      }
+      &-line {
+        margin: 3px 0;
+      }
+
+      &:hover {
+        cursor: pointer;
       }
     }
   }

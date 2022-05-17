@@ -62,7 +62,7 @@
   }
 }
 
-@media only screen and (max-width: $big-desktop) {
+@media only screen and (max-width: $small-desktop) {
   .blog-designing {
     &__svg {
       width: 66rem;
@@ -83,6 +83,20 @@
     }
   }
 }
+
+@media only screen and (max-width: $small-tablet) {
+  .blog-designing {
+    &__list {
+      margin-left: -2rem;
+      margin-right: -2rem;
+    }
+    &__item {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+}
+
 
 @media only screen and (max-width: $large-mobile) {
   .blog-designing {

@@ -3,15 +3,17 @@
     margin-top: 8rem;
     margin-bottom: 4rem;
   }
+
   &__wrapper {
     flex-direction: row !important;
     align-items: start !important;
   }
+
   &__slide {
     padding: 0.5rem;
     box-sizing: border-box;
-    height:auto;
-    flex:0 0 auto;
+    height: auto;
+    flex: 0 0 auto;
   }
 
   &__card {
@@ -65,6 +67,22 @@
     .swiper-pagination-bullet-active {
       background: $orange;
       color: $white;
+    }
+  }
+}
+
+@media only screen and (max-width: $large-mobile) {
+  .useful {
+    &__slider {
+      margin: 4rem 0;
+    }
+
+    &__block {
+      height: 20rem;
+    }
+
+    &__card {
+      height: auto;
     }
   }
 }

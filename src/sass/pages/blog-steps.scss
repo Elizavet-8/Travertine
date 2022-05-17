@@ -1,0 +1,114 @@
+.blog-steps {
+  padding-bottom: 17.7rem;
+  position: relative;
+
+  &__img {
+    object-fit: cover;
+    width: 76.0rem;
+    height: 63.8rem;
+    position: absolute;
+    top: 30.4rem;
+    right: 0;
+  }
+
+  &__subtitle, &__title {
+    text-align: left;
+    margin-left: 0;
+  }
+
+  &__title {
+    margin-bottom: 12rem;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: -2.5rem -4.4rem;
+    max-width: 88rem;
+  }
+
+  &__item {
+    padding: 2.5rem 4.4rem;
+    max-width: 44.3rem;
+  }
+
+  &__content {
+    position: relative;
+  }
+
+  &__counter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $black;
+    border-radius: 50%;
+    padding: 0 .6rem;
+    color: $white;
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 140%;
+  }
+
+  &__icon {
+    width: 5.4rem;
+    height: 5.4rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: $large-desktop) {
+  .blog-steps {
+    &__img {
+      width: 70.0rem;
+      height: 57.8rem;
+    }
+  }
+}
+
+@media only screen and (max-width: $small-desktop) {
+  .blog-steps {
+    &__img {
+      width: 63.0rem;
+      height: 50.8rem;
+    }
+  }
+}
+
+@media only screen and (max-width: $medium-tablet) {
+  .blog-steps {
+    padding-bottom: 8rem;
+    &__img {
+      display: none;
+    }
+
+    &__title {
+      margin-bottom: 6rem;
+    }
+
+    &__list {
+      margin: -2rem;
+    }
+
+    &__item {
+      padding: 2rem;
+    }
+  }
+}
+
+@media only screen and (max-width: $small-mobile) {
+  .blog-steps {
+    &__list {
+      margin: 0;
+      grid-template-columns: 1fr;
+    }
+
+    &__item {
+      padding: 0;
+      margin-bottom: 5rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

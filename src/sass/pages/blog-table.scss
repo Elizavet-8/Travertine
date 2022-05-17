@@ -4,7 +4,7 @@
   }
 
   &__wrapper {
-    background: #B8A58A;
+    background: $brown;
     border-radius: 1rem;
     padding: 6rem 14rem;
     color: $white;
@@ -61,6 +61,45 @@
 
   &__text {
     max-width: 24.2rem;
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: $medium-tablet) {
+  .blog-table {
+    &__wrapper {
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+  }
+}
+
+@media only screen and (max-width: $small-tablet) {
+  .blog-table {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__item {
+      padding: 3.8rem 2rem;
+
+      &_big {
+        max-width: none;
+        margin-right: 0;
+      }
+
+      &:nth-child(2n) {
+        border-right: none;
+      }
+
+      &:nth-child(3n) {
+        border-right: 1px solid $white;
+      }
+
+      &:nth-child(3) {
+        border-top: 1px solid $white;
+      }
+    }
   }
 }
 
@@ -68,7 +107,7 @@
   .blog-table {
     &__wrapper {
       border-radius: 5px;
-      padding: 4rem 2.7rem 2rem;
+      padding: 4rem 2.7rem;
       margin-top: 6rem;
     }
 
@@ -77,23 +116,29 @@
       font-weight: 700;
       font-size: 1.6rem;
       line-height: 140%;
+      max-width: 32rem;
     }
 
     &__list {
       grid-template-columns: 1fr;
-      justify-content: center;
+      justify-items: center;
       border: none;
+
       &-two {
         grid-template-columns: 1fr;
       }
     }
 
     &__item {
-      border: none;
+      border-right: none;
       padding: 2rem 0;
-      &_big {
-        max-width: none;
-        margin-right:0;
+      width: 100%;
+      max-width: 22.8rem;
+      border-bottom: 1px solid $white;
+
+      &:nth-child(3n) {
+        border-right: none;
+        border-top: none;
       }
     }
 

@@ -1,48 +1,3 @@
-.schedule {
-  background: $dark-brown;
-  padding: 0.8rem 0 0.7rem;
-  color: $white;
-
-  &__row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  &__text {
-    font-size: 1.8rem;
-    line-height: 2.2rem;
-  }
-
-  &__links {
-    display: flex;
-    align-items: center;
-  }
-
-  &__link {
-    display: flex;
-    align-items: center;
-    font-size: 1.8rem;
-    line-height: 2.2rem;
-    color: $white;
-    margin-right: 3.5rem;
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-
-  &__svg {
-    width: 1.8rem;
-    height: 1.8rem;
-    margin-right: 0.8rem;
-
-    path {
-      fill: $white;
-    }
-  }
-}
-
 .main {
   text-align: center;
   padding-top: 19.5rem;
@@ -1139,6 +1094,7 @@
       max-width: 26rem;
     }
   }
+
   .why {
     &__row {
       flex-direction: column;
@@ -1194,6 +1150,7 @@
   .delivery {
     &__row {
       grid-template-columns: repeat(3, 28rem);
+      padding: 0 3rem;
     }
   }
 
@@ -1223,294 +1180,6 @@
       }
     }
   }
-}
-
-@media only screen and (max-width: $small-tablet) {
-  .main {
-    &__slider {
-      margin-left: -2rem;
-      margin-right: -2rem;
-    }
-  }
-
-  .goods {
-    &__grid {
-      grid-template-columns: repeat(4, 23.3rem);
-    }
-  }
-
-  .whom {
-    &-tab {
-      &__list {
-        grid-template-columns: 1fr;
-        justify-content: center;
-      }
-
-      &__text {
-        margin: auto;
-      }
-    }
-  }
-
-  .cooperation {
-    &__wrapper {
-      padding: 8rem;
-    }
-  }
-  .delivery {
-    &__row {
-      grid-template-columns: repeat(3, 24rem);
-    }
-  }
-}
-
-@media only screen and (max-width: $large-mobile) {
-  .schedule {
-    display: none;
-  }
-
-  .main {
-    padding: 12.2rem 0 4.1rem;
-
-    &__title {
-      font-size: 1.4rem;
-    }
-
-    &__img {
-      max-width: 32rem;
-      margin-top: 1.4rem;
-    }
-
-    &__slider {
-      margin-top: 1rem;
-    }
-
-    &__subtitle {
-      font-size: 1.4rem;
-      line-height: 1.7rem;
-
-      &:before {
-        margin-right: .5rem;
-      }
-    }
-  }
-
-  .main-description {
-    background: $milky;
-    padding: 0;
-
-    &__list {
-      grid-template-columns: 1fr;
-      background: $brown;
-      padding: 3.5rem 1.6rem;
-      border-radius: 5px;
-    }
-
-    &__item {
-      &:nth-child(3) {
-        .main-description__text {
-          max-width: 100%;
-        }
-      }
-    }
-
-    &__svg {
-      margin-right: .7rem;
-    }
-
-    &__text {
-      max-width: 100%;
-    }
-  }
-
-  .why {
-    padding-top: 8rem;
-    position: relative;
-
-    &__title {
-      max-width: 32rem;
-    }
-
-    &__row {
-      margin-top: 4rem;
-      border-radius: 0;
-    }
-
-    &__item {
-      margin-bottom: 2.1rem;
-
-      &:nth-child(3) {
-        .why__icon {
-          width: 2.2rem;
-          height: 2.2rem;
-        }
-      }
-
-      &:nth-child(4) {
-        .why__icon {
-          width: 1.8rem;
-          height: 2.6rem;
-        }
-      }
-    }
-
-    &__icon {
-      width: 2rem;
-      height: 2rem;
-      margin-right: 1.1rem;
-    }
-
-    &__text {
-      max-width: 22.5rem;
-    }
-
-    &__img {
-      width: auto;
-      height: 54.0rem;
-      position: absolute;
-      bottom: 0;
-      right: 0;
-
-      &-preview {
-        width: 100%;
-        height: 100%;
-      }
-    }
-
-    &__link {
-      width: 100%;
-      height: auto;
-    }
-
-    &__text {
-      max-width: 100%;
-    }
-  }
-
-  .goods {
-    padding: 11rem 0;
-
-    &__title {
-      margin-bottom: 4rem;
-    }
-
-    &__grid {
-      grid-template-columns: 1fr;
-      margin: 0;
-      border-radius: 0;
-    }
-
-    &__column {
-      padding: 0;
-      min-height: 100%;
-      margin-bottom: .8rem;
-
-      &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7), &:nth-child(8) {
-        grid-column-start: auto;
-        grid-column-end: auto;
-        grid-row-start: auto;
-        grid-row-end: auto;
-        height: 7.6rem;
-        max-height: 100%;
-        min-height: 0;
-
-        .goods__block {
-          justify-content: center;
-          align-items: center;
-        }
-      }
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-
-    &__subtitle {
-      font-size: 1.6rem;
-    }
-
-    &__img {
-      display: none;
-    }
-  }
-
-  .usage {
-    padding: 0;
-    background: transparent;
-    min-height: 0;
-
-    &-tab {
-      &__tabs {
-        margin: 3rem -1rem;
-        justify-content: center;
-        width: 100%;
-      }
-
-      &__tab {
-        font-size: 1.1rem;
-        margin: 1rem;
-
-        &:after {
-          bottom: -.5rem;
-        }
-      }
-
-      &__wrapper {
-        display: none;
-      }
-    }
-
-    &-accordion {
-      display: block;
-    }
-  }
-
-  .whom {
-    padding: 12rem 0;
-
-    &__title {
-      max-width: 32rem;
-    }
-
-    &-tab {
-      &__tabs {
-        margin: 4rem 0;
-        font-size: 1.6rem;
-        line-height: 100%;
-        background: transparent;
-        display: block;
-        height: auto;
-        border: none;
-      }
-
-      &__tab {
-        height: 7.2rem;
-        background: $milky;
-        border: 1px solid $orange;
-        border-radius: 5px;
-        text-align: center;
-        margin-bottom: .8rem;
-        font-weight: 500;
-
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
-
-      &__svg {
-        max-width: 6.9rem;
-        max-height: 6.9rem;
-      }
-
-      &__text, &_small {
-        max-width: 23.3rem;
-
-        &_small {
-          max-width: 20rem;
-        }
-      }
-    }
-  }
 
   .cooperation {
     background: $milky;
@@ -1520,10 +1189,6 @@
     &__wrapper {
       border-radius: 0;
       padding: 0;
-    }
-
-    &__title {
-      max-width: 32rem;
     }
 
     &__row {
@@ -1540,6 +1205,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      width: 80%;
     }
 
     &__subtitle {
@@ -1615,37 +1281,224 @@
     }
   }
 
-  .delivery {
-    padding-top: 14rem;
-    padding-bottom: 6rem;
-    background: $milky;
+  .whom {
+    padding: 12rem 0;
 
-    &__wrapper {
-      border-radius: 0;
-      padding: 0;
+    &-tab {
+      &__list {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      &__text {
+        margin: auto;
+      }
+
+      &__tabs {
+        margin: 4rem 0;
+        font-size: 1.6rem;
+        line-height: 100%;
+        background: transparent;
+        display: block;
+        height: auto;
+        border: none;
+      }
+
+      &__tab {
+        height: 7.2rem;
+        background: $milky;
+        border: 1px solid $orange;
+        border-radius: 5px;
+        text-align: center;
+        margin-bottom: .8rem;
+        font-weight: 500;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      &__svg {
+        max-width: 6.9rem;
+        max-height: 6.9rem;
+      }
+
+      &__text, &_small {
+        max-width: 23.3rem;
+
+        &_small {
+          max-width: 20rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $small-tablet) {
+  .main {
+    padding: 12.2rem 0 4.1rem;
+
+    &__slider {
+      margin-left: -2rem;
+      margin-right: -2rem;
     }
 
-    &__caption {
+    &__title {
+      font-size: 2.2rem;
+      margin-bottom: 3rem;
+    }
+
+    &__img {
       margin-top: 1.4rem;
-      max-width: 30.6rem;
-      font-size: 1.6rem;
-      line-height: 120%;
-      text-transform: none;
-      font-weight: 500;
     }
 
-    &__row {
-      grid-template-columns: 1fr;
-      margin-top: 6rem;
-      margin-bottom: 6.8rem;
-      padding: 0;
+    &__slider {
+      margin-top: 1rem;
     }
 
     &__subtitle {
-      margin: 2rem 0;
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 120%;
+      font-size: 1.4rem;
+      line-height: 1.7rem;
+
+      &:before {
+        margin-right: .5rem;
+      }
+    }
+  }
+
+  .main-description {
+    background: $brown;
+    padding: 0;
+
+    &__list {
+      grid-template-columns: 1fr;
+      background: $brown;
+      padding: 3.5rem 1.6rem;
+      border-radius: 5px;
+    }
+
+    &__item {
+      &:nth-child(3) {
+        .main-description__text {
+          max-width: 100%;
+        }
+      }
+    }
+
+    &__svg {
+      margin-right: .7rem;
+    }
+
+    &__text {
+      max-width: 100%;
+    }
+  }
+
+  .why {
+    &__link {
+      height: 42rem;
+    }
+  }
+
+  .goods {
+    padding: 11rem 0;
+
+    &__title {
+      margin-bottom: 4rem;
+    }
+
+    &__grid {
+      grid-template-columns: 1fr;
+      margin: 0;
+      border-radius: 0;
+    }
+
+    &__column {
+      padding: 0;
+      min-height: 100%;
+      margin-bottom: .8rem;
+
+      &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7), &:nth-child(8) {
+        grid-column-start: auto;
+        grid-column-end: auto;
+        grid-row-start: auto;
+        grid-row-end: auto;
+        height: 7.6rem;
+        max-height: 100%;
+        min-height: 0;
+
+        .goods__block {
+          justify-content: center;
+          align-items: center;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__subtitle {
+      font-size: 1.6rem;
+    }
+
+    &__img {
+      display: none;
+    }
+  }
+
+  .whom {
+    &-tab {
+      &__list {
+        grid-template-columns: 1fr;
+        justify-content: center;
+      }
+
+      &__text {
+        margin: auto;
+      }
+    }
+  }
+
+  .usage {
+    padding: 0;
+    background: transparent;
+    min-height: 0;
+
+    &-tab {
+      &__tabs {
+        margin: 3rem -1rem;
+        justify-content: center;
+        width: 100%;
+      }
+
+      &__tab {
+        font-size: 1.4rem;
+        margin: 1rem;
+
+        &:after {
+          bottom: -.5rem;
+        }
+      }
+
+      &__wrapper {
+        display: none;
+      }
+    }
+
+    &-accordion {
+      display: block;
+    }
+  }
+
+  .cooperation {
+    &__wrapper {
+      padding: 8rem 4rem;
+    }
+  }
+
+  .delivery {
+    &__row {
+      grid-template-columns: 1fr;
     }
 
     &__column {
@@ -1689,6 +1542,120 @@
         }
       }
     }
+  }
+}
+
+@media only screen and (max-width: $large-mobile) {
+
+  .why {
+    padding-top: 8rem;
+    position: relative;
+
+    &__title {
+      max-width: 32rem;
+    }
+
+    &__row {
+      margin-top: 4rem;
+      border-radius: 0;
+    }
+
+    &__item {
+      margin-bottom: 2.1rem;
+
+      &:nth-child(3) {
+        .why__icon {
+          width: 2.2rem;
+          height: 2.2rem;
+        }
+      }
+
+      &:nth-child(4) {
+        .why__icon {
+          width: 1.8rem;
+          height: 2.6rem;
+        }
+      }
+    }
+
+    &__icon {
+      width: 2rem;
+      height: 2rem;
+      margin-right: 1.1rem;
+    }
+
+    &__text {
+      max-width: 22.5rem;
+    }
+
+    &__img {
+      width: auto;
+      height: 54.0rem;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+      &-preview {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &__link {
+      width: 100%;
+      height: auto;
+    }
+
+    &__text {
+      max-width: 100%;
+    }
+  }
+
+  .cooperation {
+    &__title {
+      max-width: 32rem;
+    }
+  }
+
+  .whom {
+
+    &__title {
+      max-width: 32rem;
+    }
+  }
+
+  .delivery {
+    padding-top: 14rem;
+    padding-bottom: 6rem;
+    background: $milky;
+
+    &__wrapper {
+      border-radius: 0;
+      padding: 0;
+    }
+
+    &__caption {
+      margin-top: 1.4rem;
+      max-width: 30.6rem;
+      font-size: 1.6rem;
+      line-height: 120%;
+      text-transform: none;
+      font-weight: 500;
+    }
+
+    &__row {
+      margin-top: 6rem;
+      margin-bottom: 6.8rem;
+      padding: 0;
+    }
+
+    &__subtitle {
+      margin: 2rem 0;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 120%;
+    }
+
   }
 
   .videos {
@@ -1804,4 +1771,34 @@
     }
   }
 
+}
+
+@media only screen and (max-width: $small-mobile) {
+  .usage {
+    &-tab {
+      &__tabs {
+        flex-wrap: wrap;
+      }
+    }
+  }
+  .whom {
+    &-tab {
+      &__tab {
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+    }
+  }
+  .cooperation {
+    &__wrapper {
+      padding: 4rem 0 0;
+    }
+    &__column {
+      width: 100%;
+    }
+  }
+
+  .delivery {
+    padding-top: 2rem;
+  }
 }

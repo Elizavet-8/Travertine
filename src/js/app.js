@@ -17,48 +17,10 @@ document.addEventListener("DOMContentLoaded", function () {
         $('body,html').animate({scrollTop: top}, 1500);
     });
 
-    //телефон
-    window.addEventListener("DOMContentLoaded", function () {
-        [].forEach.call(document.querySelectorAll('.tel'), function (input) {
-            var keyCode;
-
-            function mask(event) {
-                event.keyCode && (keyCode = event.keyCode);
-                var pos = this.selectionStart;
-                if (pos < 3) event.preventDefault();
-                var matrix = "+7 (___) ___-__-__",
-                    i = 0,
-                    def = matrix.replace(/\D/g, ""),
-                    val = this.value.replace(/\D/g, ""),
-                    new_value = matrix.replace(/[_\d]/g, function (a) {
-                        return i < val.length ? val.charAt(i++) || def.charAt(i) : a
-                    });
-                i = new_value.indexOf("_");
-                if (i != -1) {
-                    i < 5 && (i = 3);
-                    new_value = new_value.slice(0, i)
-                }
-                var reg = matrix.substr(0, this.value.length).replace(/_+/g,
-                    function (a) {
-                        return "\\d{1," + a.length + "}"
-                    }).replace(/[+()]/g, "\\$&");
-                reg = new RegExp("^" + reg + "$");
-                if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) this.value = new_value;
-                if (event.type == "blur" && this.value.length < 5) this.value = ""
-            }
-
-            input.addEventListener("input", mask, false);
-            input.addEventListener("focus", mask, false);
-            input.addEventListener("blur", mask, false);
-            input.addEventListener("keydown", mask, false)
-
-        });
-
-    });
 
     //слайдеры
-    var swiper = new Swiper(".main__slider", {
-        slidesPerView: 3,
+    var main__slider = new Swiper(".main__slider", {
+        slidesPerView: 2,
         loop: true,
         speed: 2000,
         allowTouchMove: false,
@@ -67,13 +29,16 @@ document.addEventListener("DOMContentLoaded", function () {
             disableOnInteraction: false
         },
         breakpoints: {
+            361: {
+                slidesPerView: 3,
+            },
             581: {
                 slidesPerView: 4,
             },
         }
     });
 
-    var swiper = new Swiper(".videos__slider", {
+    var videos__slider = new Swiper(".videos__slider", {
         slidesPerView: 1,
         pagination: {
             el: ".swiper-pagination",
@@ -85,33 +50,13 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    var swiper = new Swiper(".gallery-modal__slider", {
+    var gallery__slider = new Swiper(".gallery-modal__slider", {
         pagination: {
             el: ".swiper-pagination",
         },
     });
 
-    // var swiper = new Swiper(".useful__slider", {
-    //     slidesPerView: 3,
-    //     grid: {
-    //         rows: 2,
-    //     },
-    //     spaceBetween: 0,
-    //     pagination: {
-    //         el: ".useful__pagination",
-    //         clickable: true,
-    //         renderBullet: function (index, className) {
-    //             return '<span class="' + className + '">' + (index + 1) + "</span>";
-    //         },
-    //     },
-    //     // breakpoints: {
-    //     //     581: {
-    //     //         slidesPerView: 3,
-    //     //     },
-    //     // }
-    // });
-
-    var swiper = new Swiper(".useful__slider", {
+    var useful__slider = new Swiper(".useful__slider", {
         slidesPerView: 1,
         grid: {
             rows: 3,
@@ -131,6 +76,42 @@ document.addEventListener("DOMContentLoaded", function () {
                 slidesPerView: 3,
             },
         }
+    });
+
+    var product__preview = new Swiper(".product-preview__slider", {
+        spaceBetween: 8,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+    });
+    var product__slider = new Swiper(".product__slider", {
+        spaceBetween: 8,
+        thumbs: {
+            swiper: product__preview,
+        },
+    });
+    //повторяющийся слайдер
+
+    var products = new Swiper(".products__slider-1", {
+        slidesPerView: 1,
+        allowTouchMove: false,
+        pagination: {
+            clickable: true,
+            el: ".products__pagination-1",
+        },
+        debugger: true,
+        loop: true
+    });
+
+    var products = new Swiper(".products__slider-2", {
+        slidesPerView: 1,
+        allowTouchMove: false,
+        pagination: {
+            clickable: true,
+            el: ".products__pagination-2",
+        },
+        debugger: true,
+        loop: true
     });
 
 
@@ -164,6 +145,10 @@ document.addEventListener("DOMContentLoaded", function () {
     //модалки
     $("#kitchen-modal").wgModal({
         triggerElement: '.kitchen-open-modal',
+    });
+
+    $("#projects-inside-modal").wgModal({
+        triggerElement: '.projects-inside-open-modal',
     });
 
 

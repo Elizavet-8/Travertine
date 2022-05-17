@@ -57,6 +57,11 @@
                     </div>
                 </div>
             </div>
+            <div class="die">
+                <span>1</span>$
+                <img class="die__svg" src="dist/images/icons/die.svg" alt="die">
+                <span>76.166</span>₽
+            </div>
         </div>
         <div class="container">
             <div class="header__row">
@@ -132,7 +137,7 @@
                     <button class="projects-inside-info__btn btn btn-orange" type="button">получить смету</button>
                 </div>
                 <div class="projects-inside__grid">
-                    <div class="projects-inside__column">
+                    <div class="projects-inside__column projects-inside-open-modal">
                         <img class="projects-inside__img object-fit" src="dist/images/avatar.png" alt="projects">
                     </div>
                     <div class="projects-inside__column">
@@ -159,7 +164,7 @@
                 </div>
                 <ul class="projects-inside__list">
                     <li class="projects-inside__item">
-                           <img class="projects-inside__svg" src="dist/images/icons/garbage.png" alt="garbage">
+                        <img class="projects-inside__svg" src="dist/images/icons/garbage.png" alt="garbage">
                         <div class="projects-inside__text">
                             <p>
                                 Уборка и вывоз мусора после
@@ -168,15 +173,15 @@
                         </div>
                     </li>
                     <li class="projects-inside__item">
-                           <img class="projects-inside__svg" src="dist/images/icons/warranty.png" alt="warranty">
+                        <img class="projects-inside__svg" src="dist/images/icons/warranty.png" alt="warranty">
                         <div class="projects-inside__text">
                             <p>
-                                Гарантия на изделие 50 лет
+                                Гарантия на изделие</br> 50 лет
                             </p>
                         </div>
                     </li>
                     <li class="projects-inside__item">
-                           <img class="projects-inside__svg" src="dist/images/icons/care.png" alt="care">
+                        <img class="projects-inside__svg" src="dist/images/icons/care.png" alt="care">
                         <div class="projects-inside__text">
                             <p>
                                 Бесплатный уход в течение года
@@ -340,6 +345,12 @@
             </div>
         </div>
     </footer>
+</div>
+
+<div id="projects-inside-modal" class="wg-modal gallery-modal">
+    <div class="gallery-modal__slide">
+        <img class="gallery-modal__img object-fit" src="dist/images/usage-tab1.png" alt="">
+    </div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"

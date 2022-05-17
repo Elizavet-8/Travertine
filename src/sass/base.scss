@@ -164,11 +164,13 @@ html {
 .pb-14 {
   padding-bottom: 14rem;
 }
+
 .object-fit {
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
+
 h2 {
   font-weight: 600;
   font-size: 4rem;
@@ -259,7 +261,15 @@ h5 {
     box-shadow: none;
     padding: 1.5rem 3rem;
   }
+
+  &-white {
+    background: $white;
+    box-shadow: 0px 0px 2.4rem $white;
+    border-radius: 5.5rem;
+    color: $orange;
+  }
 }
+
 .link {
   color: $orange;
   text-transform: none;
@@ -283,11 +293,13 @@ h5 {
 
   &:hover {
     opacity: 1;
+
     &:after {
       width: 100%;
     }
   }
 }
+
 .tab__block {
   display: none;
 
@@ -328,6 +340,81 @@ input {
   padding-bottom: 1.3rem;
 }
 
+.schedule {
+  background: $dark-brown;
+  padding: 0.8rem 0 0.7rem;
+  color: $white;
+  position: relative;
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__text {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    color: $white;
+    margin-right: 3.5rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__svg {
+    width: 1.8rem;
+    height: 1.8rem;
+    margin-right: 0.8rem;
+
+    path {
+      fill: $white;
+    }
+  }
+}
+
+.die {
+  position: absolute;
+  font-weight: 500;
+  line-height: 2.2rem;
+  text-transform: uppercase;
+  color: $white;
+  background: $brown;
+  border-radius: 0px 0px 1rem 1rem;
+  padding: .6rem 1.1rem .7rem;
+  right: 2.4rem;
+  top: 100%;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+
+  &__svg {
+    height: 1.5rem;
+    width: 1.9rem;
+    margin: 0 .5rem;
+  }
+
+  @media only screen and (max-width: $large-desktop) {
+    right: 0;
+  }
+  @media only screen and (max-width: $medium-tablet) {
+    display: none;
+  }
+}
+
 .swiper-pagination-bullet {
   opacity: 0.5;
   background: $orange;
@@ -341,7 +428,7 @@ input {
 .breadcrumb {
   padding-top: 20.4rem;
   font-weight: 500;
-  color: #BAAAA0;
+  color: $gray;
 
   &__list {
     display: flex;
@@ -417,6 +504,7 @@ input {
     max-width: 17rem;
   }
 }
+
 .blog {
   &__subtitle {
     max-width: 100%;
@@ -428,6 +516,7 @@ input {
       margin-bottom: 1.1rem;
     }
   }
+
   &__caption {
     max-width: 48.7rem;
     font-style: italic;
@@ -440,6 +529,32 @@ input {
     }
   }
 }
+
+.product {
+  &-description {
+    &__item {
+      display: flex;
+      justify-content: space-between;
+      padding: .9rem 0;
+
+      &:nth-child(2n) {
+        background: $milky;
+      }
+
+      &:last-child {
+        background: transparent;
+      }
+    }
+
+    &__text {
+      font-weight: 400;
+      line-height: 100%;
+      color: $brown;
+      margin: 0 2rem;
+    }
+  }
+}
+
 @media only screen and (max-width: $large-desktop) {
   html {
     font-size: 100vw / (1600/10);
@@ -447,7 +562,7 @@ input {
 }
 
 
-@media only screen and (max-width: $big-desktop) {
+@media only screen and (max-width: $small-desktop) {
   html {
     font-size: 100vw / (1440/10);
   }
@@ -465,10 +580,16 @@ input {
 }
 
 @media only screen and (max-width: $small-tablet) {
+  html {
+    font-size: 100vw / (800/10);
+  }
   .container {
     padding: 0 2rem;
   }
   .breadcrumb {
+    display: none;
+  }
+  .schedule {
     display: none;
   }
   body {
@@ -479,6 +600,9 @@ input {
   }
   .pb-14 {
     padding-bottom: 8.4rem;
+  }
+  h5 {
+    font-size: 1.6rem;
   }
 }
 
@@ -499,6 +623,9 @@ input {
     font-size: 1.4rem;
     line-height: 100%;
   }
+  .subtitle {
+    font-size: 1.8rem;
+  }
   .btn {
     &-play {
       border-radius: 5px;
@@ -509,6 +636,11 @@ input {
         height: 1.3rem;
         width: 1.2rem;
       }
+    }
+  }
+  .blog {
+    &__caption {
+      margin-top: 4rem;
     }
   }
 }

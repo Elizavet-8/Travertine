@@ -1,0 +1,127 @@
+.blog-grid {
+  padding-bottom: 20.2rem;
+
+  &__title {
+    max-width: 75.2rem;
+  }
+
+  &__caption {
+    margin-bottom: 8rem;
+    margin-top: 4rem;
+    max-width: 65.4rem;
+    color: $brown;
+  }
+
+  &__wrapper {
+    background: $brown;
+    border-radius: 1rem;
+    padding: 8rem 8.7rem 8rem 11rem;
+    color: $white;
+    line-height: 140%;
+    font-weight: 500;
+    position: relative;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    margin: -2.5rem;
+  }
+
+  &__item {
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 33rem;
+
+    &:nth-child(5), &:nth-child(7) {
+      grid-column-start: 2;
+      grid-column-end: 4;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 1rem;
+    position: relative;
+
+    &:before {
+      content: '';
+      background: $white;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      position: absolute;
+      left: -2rem;
+      top: .9rem;
+    }
+  }
+
+  &__elem {
+    position: absolute;
+    right: -12rem;
+    top: 21rem;
+    height: 38.2rem;
+    width: 54.1rem;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+}
+
+@media only screen and (max-width: $small-desktop) {
+  .blog-grid {
+    &__elem {
+      height: 34.2rem;
+      width: 50.1rem;
+      right: -2rem;
+    }
+  }
+}
+
+@media only screen and (max-width: $medium-tablet) {
+  .blog-grid {
+    &__elem {
+      display: none;
+    }
+
+    &__wrapper {
+      padding: 5rem 3.3rem;
+    }
+
+    &__item {
+      &:nth-child(5), &:nth-child(7) {
+        grid-column-start: auto;
+        grid-column-end: auto;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $small-tablet) {
+  .blog-grid {
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media only screen and (max-width: $large-mobile) {
+  .blog-grid {
+    &__wrapper {
+      margin-left: -2rem;
+      margin-right: -2rem;
+    }
+
+    &__caption {
+      margin-bottom: 4rem;
+    }
+
+    &__grid {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+
+    &__item {
+      width: fit-content;
+    }
+  }
+}

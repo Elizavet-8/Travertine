@@ -100,6 +100,10 @@
       }
     }
 
+    &__subtitle {
+      font-size: 1.8rem;
+    }
+
     &__img {
       transform: scale(1.05);
       transition: all 0.45s ease-in;
@@ -108,6 +112,7 @@
     &__texts {
       opacity: 1;
       transition: all 0.45s ease-in;
+      padding: 1.5rem;
     }
 
     &__link {
