@@ -73,13 +73,79 @@
       height: 100%;
     }
 
-    &__item a {
-      display: block;
-      font-weight: 500;
-      margin: 0 1.2rem;
+    &__svg {
+      margin-left: 4px;
+      width: 1.2rem;
+      height: .8rem;
+      transform: rotate(180deg);
+      transition: all .3s ease;
+    }
+
+    &__item {
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+        margin: 0 1.2rem;
+      }
+
+      &_dropdown {
+        position: relative;
+
+        &:hover  {
+          .sub-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+          }
+          .header-nav__svg {
+            transform: rotate(0);
+          }
+        }
+      }
     }
   }
 }
+
+.sub {
+  &-menu {
+    position: absolute;
+    top: 145%;
+    z-index: 5000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease;
+    transform: translateX(-20px);
+    width: fit-content;
+    min-width: 13.6rem;
+    background: $dark-brown;
+    border-radius: 4px;
+    padding: 1.4rem 1rem;
+    color: $white;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    &-item {
+      padding: 4px 0;
+      a {
+        display: block;
+        width: max-content;
+      }
+    }
+
+    @media only screen and (max-width: $medium-tablet) {
+      display: none;
+      position: static;
+      background: transparent;
+      align-items: center;
+      color: $black;
+    }
+  }
+}
+
 
 @media only screen and (max-width: $large-desktop) {
   .header {
@@ -145,9 +211,16 @@
 
       &__item {
         margin: 0 0 3.5rem 0;
-        height: 2.9rem;
+        min-height: 2.9rem;
         overflow: hidden;
         text-align: center;
+
+        &_dropdown {
+
+          &:hover .sub-menu {
+            display: flex;
+          }
+        }
 
         &:last-child {
           margin-bottom: 0;
@@ -212,6 +285,7 @@
         width: 25px;
         border-radius: 20%;
       }
+
       &-line {
         margin: 3px 0;
       }

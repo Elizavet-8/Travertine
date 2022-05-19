@@ -75,11 +75,36 @@
                 </a>
                 <nav class="header-nav" id="nav">
                     <ul class="header-nav__list">
-                        <li class="header-nav__item"><a class="header-nav__link" href="">Продукция</a></li>
-                        <li class="header-nav__item"><a class="header-nav__link" href="">Услуги</a></li>
-                        <li class="header-nav__item"><a class="header-nav__link" href="">Наши работы</a></li>
-                        <li class="header-nav__item"><a class="header-nav__link" href="">Полезное</a></li>
-                        <li class="header-nav__item"><a class="header-nav__link" href="">Контакты</a></li>
+                        <li class="header-nav__item header-nav__item_dropdown">
+                            <a class="header-nav__link">
+                                Продукция
+                                <img class="header-nav__svg" src="dist/images/icons/arrow.svg" alt="arrow">
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item"><a href="">Плиты</a></li>
+                                <li class="sub-menu-item"><a href="">Мозаика</a></li>
+                                <li class="sub-menu-item"><a href="">Слэбы</a></li>
+                                <li class="sub-menu-item"><a href="">3-D панели</a></li>
+                                <li class="sub-menu-item"><a href="">Паттерн</a></li>
+                                <li class="sub-menu-item"><a href="">Блоки</a></li>
+                                <li class="sub-menu-item"><a href="">Изделия</a></li>
+                                <li class="sub-menu-item"><a href="">Расходники</a></li>
+                                <li class="sub-menu-item"><a href="">Новинки</a></li>
+                            </ul>
+                        </li>
+                        <li class="header-nav__item header-nav__item_dropdown">
+                            <a class="header-nav__link">
+                                Услуги
+                                <img class="header-nav__svg" src="dist/images/icons/arrow.svg" alt="arrow">
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item"><a href="">Монтаж</a></li>
+                                <li class="sub-menu-item"><a href="">Уход за камнем</a></li>
+                            </ul>
+                        </li>
+                        <li class="header-nav__item"><a class="header-nav__link header-nav__link_close" href="">Наши работы</a></li>
+                        <li class="header-nav__item"><a class="header-nav__link header-nav__link_close" href="">Полезное</a></li>
+                        <li class="header-nav__item"><a class="header-nav__link header-nav__link_close" href="">Контакты</a></li>
 
                     </ul>
                 </nav>
@@ -342,13 +367,16 @@
                                     <div class="swiper gallery-modal__slider">
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide gallery-modal__slide">
-                                                <img class="gallery-modal__img object-fit" src="dist/images/usage-tab1.png" alt="">
+                                                <img class="gallery-modal__img object-fit"
+                                                     src="dist/images/usage-tab1.png" alt="">
                                             </div>
                                             <div class="swiper-slide gallery-modal__slide">
-                                                <img class="gallery-modal__img object-fit" src="dist/images/usage-tab1.png" alt="">
+                                                <img class="gallery-modal__img object-fit"
+                                                     src="dist/images/usage-tab1.png" alt="">
                                             </div>
                                             <div class="swiper-slide gallery-modal__slide">
-                                                <img class="gallery-modal__img object-fit" src="dist/images/usage-tab1.png" alt="">
+                                                <img class="gallery-modal__img object-fit"
+                                                     src="dist/images/usage-tab1.png" alt="">
                                             </div>
                                         </div>
                                         <div class="swiper-pagination"></div>
@@ -1821,7 +1849,8 @@
                     <div class="footer-social__block social__block">
                         <div class="social__row">
                             <a href="" class="social__link social__link_blue">
-                                <img class="footer-social__svg social__svg social__svg_vk" src="dist/images/icons/vk.svg"
+                                <img class="footer-social__svg social__svg social__svg_vk"
+                                     src="dist/images/icons/vk.svg"
                                      alt="vk">
                             </a>
                             <a href="" class="social__link social__link_red">

@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
         $('.header').toggleClass('show');
         $('body').toggleClass('overflow');
     });
-    $("#nav").on("click", "a", function (event) {
+    $("#nav").on("click", ".header-nav__link_close", function (event) {
         $('.header').removeClass('show');
         $('body').removeClass('overflow');
     });
