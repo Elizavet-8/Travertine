@@ -80,6 +80,87 @@
   }
 }
 
+.recommendations {
+  padding-top: 4rem;
+
+  &__wrapper {
+    background: $milky;
+    border-radius: 2rem;
+    padding: 7.4rem 16.5rem 8rem 14.7rem;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    text-align: left;
+  }
+
+  &__texts {
+    margin-right: 2rem;
+  }
+
+  &__caption {
+    margin-top: 2rem;
+    max-width: 48.6rem;
+  }
+
+  &__logo {
+    width: 32.5rem;
+    height: 7.2rem;
+  }
+
+  &-video {
+    &__link {
+      width: 100%;
+      height: 56rem;
+      position: relative;
+      margin: 5.6rem 0 2.1rem;
+      display: block;
+    }
+  }
+
+  &-slider {
+    position: relative;
+
+    &__slider {
+      height: 21.9rem;
+    }
+
+    &__img {
+      cursor: pointer;
+    }
+
+    .swiper-button-disabled {
+      opacity: 0.8;
+    }
+
+    &__pagination {
+      display: none;
+    }
+
+    &__btn {
+      position: absolute;
+      top: 30%;
+      z-index: 9;
+      cursor: pointer;
+
+      &-prev {
+        transform: rotate(180deg);
+        right: auto;
+        left: -8rem;
+      }
+
+      &-next {
+        left: auto;
+        right: -8rem;
+      }
+    }
+  }
+}
+
 .why {
   padding-top: 16rem;
   position: relative;
@@ -1095,6 +1176,31 @@
     }
   }
 
+  .recommendations {
+    &__wrapper {
+      border-radius: 5px;
+      padding: 6rem 5rem 3rem;
+    }
+
+    &-video {
+      &__link {
+        height: 48rem;
+      }
+    }
+
+    &-slider {
+      &__pagination {
+        display: block;
+        position: static;
+        margin-top: 2rem;
+      }
+
+      &__btn {
+        display: none;
+      }
+    }
+  }
+
   .why {
     &__row {
       flex-direction: column;
@@ -1393,6 +1499,34 @@
     }
   }
 
+  .recommendations {
+    &__row {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__title {
+      text-align: center;
+    }
+
+    &__caption {
+      text-align: center;
+      margin: 2.2rem 0 4rem;
+    }
+
+    &-video {
+      &__link {
+        height: 38rem;
+      }
+    }
+
+    &-slider {
+      &__slider {
+        height: 18rem;
+      }
+    }
+  }
+
   .why {
     &__link {
       height: 42rem;
@@ -1546,6 +1680,35 @@
 }
 
 @media only screen and (max-width: $large-mobile) {
+  .recommendations {
+    &__wrapper {
+      padding: 6rem 1.6rem 2.6rem;
+    }
+
+    &__texts {
+      margin-right: 0;
+    }
+
+    &__logo {
+      max-width: 27.1rem;
+      width: 100%;
+      height: auto;
+      max-height: 5.1rem;
+    }
+
+    &-video {
+      &__link {
+        margin: 4rem 0;
+        height: 25rem;
+      }
+    }
+
+    &-slider {
+      &__slider {
+        height: 28rem;
+      }
+    }
+  }
 
   .why {
     padding-top: 8rem;
@@ -1774,6 +1937,21 @@
 }
 
 @media only screen and (max-width: $small-mobile) {
+  .recommendations {
+    margin-left: -2rem;
+    margin-right: -2rem;
+    &-video {
+      &__link {
+        height: 16rem;
+      }
+    }
+
+    &-slider {
+      &__slider {
+        height: 18rem;
+      }
+    }
+  }
   .usage {
     &-tab {
       &__tabs {
@@ -1793,6 +1971,7 @@
     &__wrapper {
       padding: 4rem 0 0;
     }
+
     &__column {
       width: 100%;
     }

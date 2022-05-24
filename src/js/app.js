@@ -37,6 +37,26 @@ document.addEventListener("DOMContentLoaded", function () {
             },
         }
     });
+    var recommendations__slider = new Swiper(".recommendations-slider__slider", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".recommendations-slider__btn-next",
+            prevEl: ".recommendations-slider__btn-prev",
+        },
+        pagination: {
+            el: ".recommendations-slider__pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            581: {
+                slidesPerView: 2,
+            },
+            999: {
+                slidesPerView: 3,
+            },
+        }
+    });
 
     var videos__slider = new Swiper(".videos__slider", {
         slidesPerView: 1,
@@ -151,6 +171,8 @@ document.addEventListener("DOMContentLoaded", function () {
         triggerElement: '.projects-inside-open-modal',
     });
 
-
+    $("#recommendations-modal").wgModal({
+        triggerElement: '.recommendations-open-modal',
+    });
 })
 
